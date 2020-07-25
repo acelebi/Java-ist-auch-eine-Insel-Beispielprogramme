@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:room xmlns:ns2="http://tutego.com/">
+  <player>
+    <name>John Peel</name>
+  </player>
+  <player>
+    <name>Zwitscher Zoe</name>
+    <name>Heini Hayward</name>
+  </player>
+</ns2:room>

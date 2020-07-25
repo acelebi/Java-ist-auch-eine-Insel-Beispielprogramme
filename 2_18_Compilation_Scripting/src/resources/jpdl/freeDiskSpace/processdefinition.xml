@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process-definition xmlns="" name="freeDiskSpace">
+
+  <start-state name="Check for Disk Space">
+    <transition to="Enough free Disk Space?">
+      <action class="com.tutego.insel.jpdl.FreeDiskSpaceInMBActionHandler"></action>
+    </transition>
+  </start-state>
+
+  <decision name="Enough free Disk Space?">
+    <transition to="Low on Disk Space" name="No">
+      <condition expression="freeDiskSpace &lt; 1000000000"></condition>
+    </transition>
+    <transition to="End Process" name="Yes">
+      <condition expression="freeDiskSpace &gt;= 100000000"></condition>
+    </transition>
+  </decision>
+
+  <node name="Low on Disk Space">
+    <transition to="End Process" name="Notify low Disk Space">
+      <action class="com.tutego.insel.jpdl.LogLowOnDiskSpaceActionHandler"></action>
+    </transition>
+  </node>
+
+  <end-state name="End Process"></end-state>
+
+</process-definition>

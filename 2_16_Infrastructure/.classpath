@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/weld-se.jar"/>
+	<classpathentry kind="lib" path="lib/hibernate-validator-5.0.3.Final.jar"/>
+	<classpathentry kind="lib" path="lib/validation-api-1.1.0.Final.jar"/>
+	<classpathentry kind="lib" path="lib/jboss-logging-3.1.1.GA.jar"/>
+	<classpathentry kind="lib" path="lib/classmate-1.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/javax.el-2.2.4.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

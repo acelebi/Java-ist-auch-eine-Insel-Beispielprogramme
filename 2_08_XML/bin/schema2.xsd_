@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="player" type="player" />
+
+  <xs:complexType name="room">
+    <xs:sequence>
+      <xs:element ref="player" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="player">
+    <xs:sequence>
+      <xs:element name="birthday" type="xs:dateTime" minOccurs="0" />
+      <xs:element name="name" type="xs:string" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

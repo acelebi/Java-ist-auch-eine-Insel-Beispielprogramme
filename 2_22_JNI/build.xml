@@ -1,0 +1,26 @@
+<project default="cc" basedir=".">
+
+	<target name="javah">
+		<javah classpath="bin" outputFile="strlen.h" verbose="yes">
+			<class name="com.tutego.jni.StrLen" />
+		</javah>
+	</target>
+
+	<target name="cc" depends="javah">
+
+		<exec dir="c:\cygwin\bin\" executable="c:\cygwin\bin\gcc-3">
+			<arg value="-mno-cygwin" />
+			<arg value="-I" />
+			<arg value="C:\Program Files\Java\jdk1.7.0\include" />
+			<arg value="-I" />
+			<arg value="C:\Program Files\Java\jdk1.7.0\include\win32" />
+			<arg value="-shared" />
+			<arg value="-Wl,--add-stdcall-alias" />
+			<arg value="-o" />
+			<arg value="${basedir}\strlen.dll" />
+			<arg value="${basedir}\strlen.c" />
+		</exec>
+
+	</target>
+
+</project>

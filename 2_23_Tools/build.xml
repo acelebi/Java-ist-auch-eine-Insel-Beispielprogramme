@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<project name="Insel" default="build" basedir=".">
+  <target name="build">
+    <javac srcdir="." />
+  </target>
+</project>
+
